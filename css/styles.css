@@ -10,10 +10,17 @@ a {
   border-bottom: 1px solid #666;
 }
 
-h2 {
+h3 {
 
   letter-spacing: 3px;
   font-size: 1.2em;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .logo {
@@ -35,6 +42,12 @@ nav a {
   margin: 0 0.4rem;
 }
 
+.footer {
+  text-align: center;
+  margin: 3rem 0 4rem 0;
+  font-size: 0.9em;
+}
+
 #slider {
   max-width: 1200px;
   margin: 0 auto;
@@ -50,8 +63,12 @@ nav a {
   max-width: 1000px;
 }
 .look {
-  width: 50%;
+  width: 49%;
   float: left;
+}
+.row .single {
+  float: none;
+  margin: 0 auto;
 }
 .look img {
   max-width: 100%;
