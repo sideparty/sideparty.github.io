@@ -1,3 +1,53 @@
 body {
   font-family: "New Transport Regular", serif;
 }
+h3 {
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  font-family: "New Transport Bold", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.coming-soon {
+  font-size: 1.7em;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "New Transport Bold", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.join .big {
+  font-family: "New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.page-title {
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 1px;
+  font-family: "New Transport Bold", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 0;
+}
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about img {
+  float: left;
+  width: 50%;
+}
+.about .text {
+  float: right;
+  width: 50%;
+  padding: 0 2em 0 2em;
+}
+@media only screen and (max-width: 660px) {
+  .about img {
+    width: 100%;
+  }
+  .about .text {
+    width: 100%;
+  }
+}
