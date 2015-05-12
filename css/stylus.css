@@ -7,8 +7,8 @@ body {
 h3 {
   letter-spacing: 1px;
   font-size: 1.2em;
-  font-family: "New Transport Bold", avenir, 'segoe ui', roboto, arial, sans-serif;
-  font-weight: bold;
+  font-family: "New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-weight: 800;
   font-style: normal;
 }
 a {
@@ -18,8 +18,8 @@ a {
   font-size: 1.7em;
   text-align: center;
   letter-spacing: 1px;
-  font-family: "New Transport Bold", avenir, 'segoe ui', roboto, arial, sans-serif;
-  font-weight: bold;
+  font-family: "New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-weight: 800;
   font-style: normal;
 }
 .join .big {
@@ -31,8 +31,8 @@ a {
   text-align: center;
   font-size: 2em;
   letter-spacing: 1px;
-  font-family: "New Transport Bold", avenir, 'segoe ui', roboto, arial, sans-serif;
-  font-weight: bold;
+  font-family: "New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-weight: 800;
   font-style: normal;
   margin-top: 0;
 }
