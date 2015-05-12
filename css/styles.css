@@ -60,9 +60,12 @@ nav a:hover {
   font-size: 0.9em;
 }
 
-#slider {
+#myslider {
   max-width: 1200px;
   margin: 0 auto;
+}
+#myslider img {
+  max-width: 100%;
 }
 
 .copy {
