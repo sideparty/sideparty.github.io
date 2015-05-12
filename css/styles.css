@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
@@ -84,8 +91,33 @@ nav a:hover {
   max-width: 100%;
 }
 
-.lookbook-title-image {
-  display: block;
+.lookbook-title {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.lookbook-title-image {
+  display: block;
+  max-width: 100%;
+}
+
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about img {
+  float: left;
+  width: 50%;
+}
+.about .text {
+  float: right;
+  width: 50%;
+  padding: 2em;
+}
+
+@media only screen
+  and (max-width: 660px) {
+
+  .about img { width: 100%; }
+  .about .text { width: 100%; }
 }
