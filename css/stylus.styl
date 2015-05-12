@@ -1,9 +1,84 @@
 
+@import 'normalize'
+@import 'main'
+@import 'spinner'
+
 regularFont()
   font-family:"New Transport Regular", avenir, 'segoe ui', roboto, arial, sans-serif; font-weight:normal; font-style:normal;
 
 blackFont()
   font-family:"New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif; font-weight:800; font-style:normal;
+
+html
+  box-sizing: border-box
+*, *:before, *:after
+  box-sizing: inherit;
+
+body
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+
+.logo
+  text-align: center;
+  margin-bottom: 0.8rem;
+.logo img
+  max-width: 320px;
+.logo a
+  border: none;
+
+nav
+  text-align: center;
+  margin-bottom: 1rem;
+nav a
+  display: inline-block;
+  color: #222;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+  margin: 0 0.4rem;
+  transition: border-color .2s ease;
+nav a:hover
+  border-bottom: 2px solid #444;
+
+.footer
+  text-align: center;
+  margin: 3rem 0 4rem 0;
+  font-size: 0.9em;
+
+#myslider
+  max-width: 1200px;
+  margin: 0 auto;
+#myslider img
+  max-width: 100%;
+
+.copy
+  margin: 0 auto;
+  max-width: 400px;
+
+.looks
+  margin: 0 auto;
+  max-width: 1000px;
+.look
+  width: 49%;
+  float: left;
+.look p
+  margin-top: 0.2em;
+  font-size: 0.9em;
+  color: #444;
+.row .single
+  float: none;
+  margin: 0 auto;
+.look img
+  max-width: 100%;
+
+.lookbook-title
+  max-width: 600px;
+  margin: 0 auto;
+
+.lookbook-title-image
+  display: block;
+  max-width: 100%;
 
 body
   regularFont()
