@@ -12,7 +12,8 @@ blackFont()
   font-family:"New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif; font-weight:800; font-style:normal;
 
 body
-  font-family:"New Transport Regular", serif;
+  regularFont()
+  line-height 1.5
 
 h3
   letter-spacing: 1px;
@@ -51,3 +52,60 @@ h3
     width: 100%
   .about .text
     width: 100%
+
+.join {
+  text-align: center;
+  border-top: 2px solid #222;
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;
+  padding: 1rem;
+}
+.join .big {
+  font-size: 2.6em;
+  letter-spacing: 2px;
+}
+.join #waiting {
+  padding: 1rem;
+}
+.join input {
+  border: none;
+  padding: 1em 1em;
+  lein-height: 2 !important;
+  border-bottom: 2px solid #333;
+  outline: none;
+  font-size: 1.2em;
+  width: 240px;
+  margin-right: 1rem;
+  overflow: show;
+}
+.join input:focus {
+  outline: 0;
+  outline: none;
+}
+.join button {
+  font-family: inherit;
+  font-size: 1.2em;
+  padding: .85em 1.6em 1em 1.6em;
+  border: 1px solid #999;
+  border: 0 rgba(0,0,0,0);
+  text-decoration: none;
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  background-color: #222;
+}
+
+.message {
+  padding: 1rem;
+  font-size: 1.2em;
+}
