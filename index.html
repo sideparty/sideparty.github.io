@@ -33,7 +33,7 @@
           <a href="/contact.html">contact</a>
         </nav>
 
-        <div class="slider">
+        <div id="myslider">
           <img src="img/1.jpg" alt="">
           <img src="img/2.jpg" alt="">
           <img src="img/3.jpg" alt="">
@@ -46,6 +46,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
 
         <script>
@@ -58,6 +59,20 @@
 
           });
         });
+
+        $(document).ready(function(){
+          $('#myslider').imagesLoaded( function() {
+            // images have loaded
+            $('#myslider').slick({
+              autoplay: true,
+              autoplaySpeed: 300,
+              arrows: false,
+              pauseOnHover: false
+
+            });
+          });
+        });
+
         </script>
 
         <script src="js/plugins.js"></script>
