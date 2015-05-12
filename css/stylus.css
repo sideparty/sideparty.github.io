@@ -11,6 +11,9 @@ h3 {
   font-weight: bold;
   font-style: normal;
 }
+a {
+  color: #555;
+}
 .coming-soon {
   font-size: 1.7em;
   text-align: center;
@@ -52,6 +55,7 @@ h3 {
   }
   .about .text {
     width: 100%;
+    padding-top: 2rem;
   }
 }
 .join {
