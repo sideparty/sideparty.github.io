@@ -13,9 +13,25 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/stylus.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 
         <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+        <script type="text/javascript">
+        WebFontConfig = { fontdeck: { id: '56353' } };
+
+        (function() {
+          var wf = document.createElement('script');
+          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+          wf.type = 'text/javascript';
+          wf.async = 'true';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wf, s);
+        })();
+        </script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -28,15 +44,39 @@
         </h1>
 
         <nav>
-          <a href="/lookbook.html">lookbook</a>
           <a href="/about.html">about</a>
           <a href="/contact.html">contact</a>
         </nav>
 
-        <div id="myslider">
-          <img src="img/1.jpg" alt="">
-          <img src="img/2.jpg" alt="">
-          <img src="img/3.jpg" alt="">
+        <div class="slider-container">
+          <div id="myslider">
+            <img src="img/1.jpg" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="coming-soon">
+          <p>Launching in September 2015</p>
+        </div>
+
+        <div class="join">
+          <div id="form">
+            <p class="big">Join the Side Party</p>
+            <input id="email-input" type="email" placeholder="email address"></input>
+            <button id="join-button">Subscribe</button>
+          </div>
+
+          <div class="message" id="thanks" style="display: none;">
+            <p><strong>Thanks!</strong> We'll email you with updates.</p>
+          </div>
+          <div class="message" id="invalid-email" style="display: none;">
+            <p><strong>Oops!</strong> That isn't a valid email address.</p>
+          </div>
+
+          <div id="waiting" style="display: none;">
+            <div class="spinner"></div>
+          </div>
         </div>
 
         <div class="footer">
@@ -49,28 +89,63 @@
         <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
 
-        <script>
-        $(document).ready(function(){
-          $('.slider').slick({
-            autoplay: true,
-            autoplaySpeed: 300,
-            arrows: false,
-            pauseOnHover: false
+        <script type="text/javascript" src="js/moment.min.js"></script>
 
-          });
-        });
+        <script>
 
         $(document).ready(function(){
           $('#myslider').imagesLoaded( function() {
             // images have loaded
             $('#myslider').slick({
               autoplay: true,
-              autoplaySpeed: 300,
+              infinite: true,
+              autoplaySpeed: 3400,
+              speed: 200,
+              fade: true,
+              cssEase: 'linear',
               arrows: false,
               pauseOnHover: false
 
             });
           });
+        });
+
+        var myFirebaseRef = new Firebase("https://sidepartysoon.firebaseio.com/coming_soon_emails");
+
+        var validateEmail = function (email) {
+          var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+          return re.test(email);
+        }
+
+        var addEmail = function(){
+          $('#invalid-email').hide();
+          if (!validateEmail($('#email-input').val())) {
+            $('#invalid-email').slideDown();
+          } else {
+            $('#waiting').show();
+            myFirebaseRef.push({
+              email: $('#email-input').val(),
+              date: moment().format(),
+              language: navigator.language || navigator.userLanguage
+            }, function(error){
+              $('#waiting').hide();
+              if (error) {
+                alert("There was an error, please try again later!");
+              } else {
+                $('#thanks').slideDown();
+                $('#join-sideparty').slideUp();
+              }
+            });
+          }
+        }
+
+        $('#join-button').click(addEmail);
+
+        $('#email-input').keypress(function(event){
+          if (event.keyCode === 13) {
+            console.log("enteeeer");
+            addEmail();
+          }
         });
 
         </script>
