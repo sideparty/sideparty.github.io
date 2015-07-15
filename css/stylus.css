@@ -604,15 +604,15 @@ nav a:hover {
   max-width: 100%;
 }
 body {
-  font-family: "New Transport Regular", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-family: "Aften Screen", avenir, 'segoe ui', roboto, arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 h3 {
   letter-spacing: 1px;
   font-size: 1.2em;
-  font-family: "New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-family: "Aften Screen", avenir, 'segoe ui', roboto, arial, sans-serif;
   font-weight: 800;
   font-style: normal;
 }
@@ -626,12 +626,12 @@ a {
   font-size: 1.7em;
   text-align: center;
   letter-spacing: 1px;
-  font-family: "New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-family: "Aften Screen", avenir, 'segoe ui', roboto, arial, sans-serif;
   font-weight: 800;
   font-style: normal;
 }
 .join .big {
-  font-family: "New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-family: "Aften Screen", avenir, 'segoe ui', roboto, arial, sans-serif;
   font-weight: 800;
   font-style: normal;
 }
@@ -639,7 +639,7 @@ a {
   text-align: center;
   font-size: 2em;
   letter-spacing: 1px;
-  font-family: "New Transport Black", avenir, 'segoe ui', roboto, arial, sans-serif;
+  font-family: "Aften Screen", avenir, 'segoe ui', roboto, arial, sans-serif;
   font-weight: 800;
   font-style: normal;
   margin-top: 0;
@@ -720,4 +720,25 @@ a {
 .message {
   padding: 1rem;
   font-size: 1.2em;
+}
+.suppliers {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.suppliers h2 {
+  text-align: center;
+}
+.suppliers .supplier {
+  border-bottom: 1px solid #595959;
+  padding: 1em 0;
+}
+.suppliers .supplier h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+.suppliers .supplier p {
+  margin: 0;
 }
