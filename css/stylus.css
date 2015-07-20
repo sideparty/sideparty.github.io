@@ -747,3 +747,11 @@ a {
   color: #646464;
   margin-bottom: 0.5em;
 }
+.suppliers .supplier .country a {
+  font-style: normal;
+  text-decoration: none;
+  border-bottom: 1px dotted #6f6f6f;
+}
+.suppliers .supplier .country a:hover {
+  border-bottom: 1px solid #6f6f6f;
+}
